@@ -1,5 +1,5 @@
 # Importações
-from Funções.metodos import adicionar, exibir
+from Funções.metodos import adicionar, exibir, remover
 
 # Variavel
 lista_tarefas = []
@@ -22,20 +22,7 @@ while True:
     
     # Removendo tarefas
     elif escolha == '2':
-        try:
-            removendo = int(input('\n=== Digite o número correspondente a tarefa que deseja remover: '))
-            '''O valor 'removendo' precisa ser maior que 0 para poder remover(não existe 0 na lista)
-            e o valor precisa ser menor ou igual a quantidade de tarefas que existe dentro da lista,
-            não posso remover um item com um número que não tenha na lista'''
-            if 0 < removendo <= len(lista_tarefas):
-                del lista_tarefas[removendo - 1] # Se o usuario digitar '1' não remove o primeiro pq para remover o primeiro o indice precisa ser 0. por isso uso '- 1' tornando o número 1 em indice 0
-                print('\n--- Tarefa removida com sucesso ---') 
-            else:
-                print ('\n--- Número inválido. Tente novamente. ---')
-        except ValueError:
-            print('\n===== ERRO: Digite o número do item da lista. =====')
-        except:
-            print('\n===== ERRO: não identificado. =====')
+        remover(lista_tarefas)
 
     # Exibindo tarefas
     elif escolha == '3': 
