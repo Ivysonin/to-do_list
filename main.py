@@ -1,5 +1,5 @@
 # Importações
-from Funções.metodos import adicionar, exibir, remover
+from Funções.metodos import adicionar, exibir, remover, concluir
 
 # Variavel
 lista_tarefas = []
@@ -12,7 +12,8 @@ while True:
                     '[ 1 ] Adicionar tarefas\n'
                     '[ 2 ] Remover tarefa\n'
                     '[ 3 ] Exibir tarefas\n'
-                    '[ 4 ] Encerrar programa\n'
+                    '[ 4 ] Marcar como concluído\n'
+                    '[ 5 ] Encerrar programa\n'
                     'Escolha: ')
     
     # Adicionando tarefas
@@ -28,8 +29,12 @@ while True:
     elif escolha == '3': 
         exibir(lista_tarefas)
 
-    # Encerrando programa
+    # Concluindo tarefas
     elif escolha == '4':
+        concluir(lista_tarefas)
+
+    # Encerrando programa
+    elif escolha == '5':
         print ('\n===== encerrando... =====\n')
         break
     
