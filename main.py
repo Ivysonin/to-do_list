@@ -39,7 +39,6 @@ while True:
 
     # Exibindo tarefas
     elif escolha == '3': 
-        print ('\n--- Tarefas ---\n') # Organização
         exibir(lista_tarefas)
 
     # Encerrando programa
