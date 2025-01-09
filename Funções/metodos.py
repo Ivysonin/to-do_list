@@ -27,3 +27,20 @@ def remover(lista : list) -> str:
         print('\n===== ERRO: Digite o número do item da lista. =====')
     except:
         print('\n===== ERRO: não identificado. =====')
+
+def concluir(lista : list) -> str: # Retorna um indice sublinhado na lista
+    def riscar_texto(tarefa):
+        return ''.join([letra + '\u0336' for letra in tarefa]) # Separa cada letra da tarefa colocando traços entre eles, depois só juntar tudo com a função join()
+
+    # Pegando o indice que o usuário quer concluir
+    indice_para_concluir = int(input('\n=== Digite o número correspondente a tarefa que deseja concluir: '))
+
+    if 0 < indice_para_concluir <= len(lista):
+        concluido = lista[indice_para_concluir - 1] # recebe o indice da lista-1 para ficar o indice exato que o usuario digitou(sempre vai ser um a menos)
+
+        del lista[indice_para_concluir - 1] # Removendo o item da lista para não ficar um item sem concluir e um concluído
+
+        print('\n--- Tarefa concluída com sucesso ---') # Organização
+        return lista.append(riscar_texto(concluido)) # Adicionando a tarefa concluida para a lista
+    else:
+        print ('\n--- Número inválido. Tente novamente. ---')
