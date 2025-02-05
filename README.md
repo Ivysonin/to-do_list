@@ -1,7 +1,7 @@
 # 🚀 Projeto To-do list
 
 # 📖 Resumo
-Pensado para praticar a lógica de como séria uma To-do list de verdada na web, aplicativos e serviços como o Google.
+Pensado para praticar a lógica de como séria uma To-do list de verdada na web, aplicativos e serviços como o Google Keep.
 Não é nada complexo nem muito ELABORATO, foi feito para praticar e treinar a lógica, tanto do código como o pensamento por trás para desenvolver o programa.
 
 # 👨‍💻 Tecnologias usadas
