@@ -73,6 +73,10 @@ Durante a construção desse projeto, o foco principal foi:
 * Criar uma interface amigável com HTML + CSS customizado
 * Evitar uso de banco de dados e sessions, focando puramente na lógica
 
+## 🖼️ Imagem
+
+![Preview do Projeto](assets/imagem_to-do.png)
+
 ## 📌 Observações
 
 * O projeto **não utiliza banco de dados**, então as tarefas são armazenadas apenas em memória.
