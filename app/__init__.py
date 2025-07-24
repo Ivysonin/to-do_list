@@ -9,5 +9,7 @@ def create_app():
 
     from app.controllers.tarefas_controller import tarefas_bp
     app.register_blueprint(tarefas_bp)
+    from app.controllers.home_controller import home_bp
+    app.register_blueprint(home_bp)
 
     return app
