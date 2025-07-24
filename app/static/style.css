@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Form de adicionar */
+.form-adicionar {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.form-adicionar input[type="text"] {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-adicionar button {
+    padding: 14px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 16px;
+}
+
+.form-adicionar button:hover {
+    background-color: #0056b3;
+}
+
+/* Tarefas */
+.tarefa {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 16px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarefa.concluida .descricao {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.descricao {
+    font-size: 16px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Botões agrupados */
+.botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.botoes form button {
+    padding: 8px 12px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.botoes form button:hover {
+    background-color: #cfcfcf;
+}
+
+/* Ícones dentro dos botões */
+button i {
+    pointer-events: none;
+}
+
+/* Mensagem de vazio */
+p {
+    color: #666;
+    margin-top: 20px;
+    font-size: 15px;
+}
