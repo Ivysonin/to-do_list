@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <h1>To-do</h1>
+    
+    <form method="POST" action="{{ url_for('tarefas.adicionar') }}" class="form-adicionar">
+        <input type="text" name="descricao" placeholder="Nova tarefa" required>
+        <button type="submit"><i class="fas fa-plus"></i></button>
+    </form>
+
+    {% if tarefas %}
+        {% for tarefa in tarefas %}
+            <div class="tarefa {% if tarefa.concluida %}concluida{% endif %}">
+                <span class="descricao">{{ tarefa.descricao }}</span>
+
+                <div class="botoes">
+                    {% if not tarefa.concluida %}
+                        <form method="POST" action="{{ url_for('tarefas.concluir', id=tarefa.id) }}">
+                            <button type="submit" title="Concluir"><i class="fas fa-check"></i></button>
+                        </form>
+                    {% endif %}
+                    <form method="POST" action="{{ url_for('tarefas.remover', id=tarefa.id) }}">
+                        <button type="submit" title="Remover"><i class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Você ainda não tem tarefas disponíveis.</p>
+    {% endif %}
+
+</body>
+</html>
