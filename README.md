@@ -81,3 +81,7 @@ Durante a construção desse projeto, o foco principal foi:
 
 * O projeto **não utiliza banco de dados**, então as tarefas são armazenadas apenas em memória.
 * Ideal para fins de estudo e prática de lógica com Python + Flask.
+
+## 📄 Licença
+
+Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE), com cláusula adicional de atribuição.
